@@ -1,11 +1,13 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Landing from 'pages/Landing';
+import EmployeeInfo from 'pages/EmployeeInfo';
 
 const RoutePaths = () => {
   return (
     <Routes>
-      <Route path="/landing" element={<Landing />} />
       <Route path="/" element={<Navigate replace to="/landing" />} />
+      <Route path="/landing" element={<Landing />} />
+      <Route path="/employee-info" element={<EmployeeInfo />} />
     </Routes>
   );
 };

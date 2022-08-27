@@ -9,7 +9,11 @@ const customTheme = extendTheme({
   styles: {
     global: {
       body: {
+        color: 'black',
         backgroundColor: 'primary',
+      },
+      option: {
+        backgroundColor: 'white',
       },
     },
   },
