@@ -19,34 +19,21 @@ import {
   RadioGroup,
   Radio,
 } from '@chakra-ui/react';
-import { ChevronLeftIcon } from '@chakra-ui/icons';
+import Header from 'components/Header';
 
-const LaptopInfo = () => {
+const LaptopSpecs = () => {
   return (
     <Flex direction="column" justify="space-between">
-      <IconButton
-        variant="unstyled"
-        position="absolute"
-        top="19px"
-        left="2px"
-        icon={<ChevronLeftIcon w="32px" h="32px" />}
-        size="lg"
-        mr="auto"
-      />
-      <Flex direction="column" align="center" mt="30px" mb="40px">
-        <Heading fontSize="16px" textAlign="center">
-          ლეპტოპის მახასიათებლები
-        </Heading>
-        <Text fontSize="14" color="gray.400">
-          2/2
-        </Text>
-      </Flex>
+      <Header />
+      <Text fontSize="14" color="gray.400" textAlign="center" mb="30px">
+        2/2
+      </Text>
       <Button h="100%" bg="none">
         <Flex direction="column" align="center" position="relative" mb="40px">
           <Box boxSize="100%">
             <Image
               objectFit="cover"
-              src="./images/mobile/mobile-rectangle.png"
+              src="./images/mobile-rectangle.png"
               alt="mobile image upload rectangle"
             />
           </Box>
@@ -55,7 +42,7 @@ const LaptopInfo = () => {
               <Box mb="30px">
                 <Image
                   objectFit="cover"
-                  src="./images/mobile/mobile-image-icon.png"
+                  src="./images/mobile-image-icon.png"
                   alt="mobile upload icon"
                 />
               </Box>
@@ -231,4 +218,4 @@ const LaptopInfo = () => {
   );
 };
 
-export default LaptopInfo;
+export default LaptopSpecs;

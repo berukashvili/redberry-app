@@ -13,7 +13,7 @@ const Success = () => {
       <Box>
         <Image
           objectFit="cover"
-          src="./images/mobile/mobile-success.png"
+          src="./images/mobile-success.png"
           alt="mobile succes hero image"
         />
       </Box>

@@ -7,14 +7,14 @@ const Landing = () => {
       <Box boxSize="112px" mt="64px">
         <Image
           objectFit="cover"
-          src="./images/mobile/mobile-logo.png"
+          src="./images/mobile-logo.png"
           alt="mobile header logo"
         />
       </Box>
       <Box boxSize="268px" mb="132px">
         <Image
           objectFit="cover"
-          src="./images/mobile/mobile-hero.png"
+          src="./image/mobile-hero.png"
           alt="mobile hero image"
         />
       </Box>

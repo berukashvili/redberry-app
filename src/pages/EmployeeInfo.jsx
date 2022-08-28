@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Flex,
-  Heading,
   Text,
   FormControl,
   FormHelperText,
@@ -10,30 +9,16 @@ import {
   Input,
   Select,
   Button,
-  IconButton,
 } from '@chakra-ui/react';
-import { ChevronLeftIcon } from '@chakra-ui/icons';
+import Header from 'components/Header';
 
 const EmployeeInfo = () => {
   return (
     <Flex direction="column" justify="space-between">
-      <IconButton
-        variant="unstyled"
-        position="absolute"
-        top="19px"
-        left="2px"
-        icon={<ChevronLeftIcon w="32px" h="32px" />}
-        size="lg"
-        mr="auto"
-      />
-      <Flex direction="column" align="center" mt="30px" mb="40px">
-        <Heading fontSize="16px" textAlign="center">
-          თანამშრომლის ინფო
-        </Heading>
-        <Text fontSize="14" color="gray.400">
-          1/2
-        </Text>
-      </Flex>
+      <Header />
+      <Text fontSize="14" color="gray.400" textAlign="center">
+        1/2
+      </Text>
       <FormControl mb="20px">
         <FormLabel fontSize="18px" fontWeight="bold">
           სახელი
