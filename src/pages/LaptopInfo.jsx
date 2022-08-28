@@ -47,7 +47,7 @@ const LaptopInfo = () => {
             <Image
               objectFit="cover"
               src="./images/mobile/mobile-rectangle.png"
-              alt="Mobile Hero Image"
+              alt="mobile image upload rectangle"
             />
           </Box>
           <Box position="absolute" top="52px">
@@ -56,7 +56,7 @@ const LaptopInfo = () => {
                 <Image
                   objectFit="cover"
                   src="./images/mobile/mobile-image-icon.png"
-                  alt="Mobile Hero Image"
+                  alt="mobile upload icon"
                 />
               </Box>
               <Text

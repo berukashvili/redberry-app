@@ -8,14 +8,14 @@ const Landing = () => {
         <Image
           objectFit="cover"
           src="./images/mobile/mobile-logo.png"
-          alt="Mobile Header Logo"
+          alt="mobile header logo"
         />
       </Box>
       <Box boxSize="268px" mb="132px">
         <Image
           objectFit="cover"
           src="./images/mobile/mobile-hero.png"
-          alt="Mobile Hero Image"
+          alt="mobile hero image"
         />
       </Box>
       <Flex direction="column">
