@@ -22,6 +22,24 @@ import {
 import Header from 'components/Header';
 
 const LaptopSpecs = () => {
+  const mainList = [
+    {
+      label: 'CPU-ს ბირთვი',
+      text: '14',
+      val: 'მხოლოდ ციფრები',
+    },
+    {
+      label: 'CPU-ს ნაკადი',
+      text: '365',
+      val: 'მხოლოდ ციფრები',
+    },
+    {
+      label: 'ლეპტოპის RAM (GB)',
+      text: '16',
+      val: 'მხოლოდ ციფრები',
+    },
+  ];
+
   return (
     <Flex direction="column" justify="space-between">
       <Header />
@@ -46,12 +64,7 @@ const LaptopSpecs = () => {
                   alt="mobile upload icon"
                 />
               </Box>
-              <Text
-                color="secondary-blue"
-                fontSize="16px"
-                width="70%"
-                textAlign="center"
-              >
+              <Text color="secondary-blue" fontSize="16px">
                 ლეპტოპის ფოტოს ატვირთვა
               </Text>
             </Flex>
@@ -100,7 +113,24 @@ const LaptopSpecs = () => {
           <option value="option3">ლიდი</option>
         </Select>
       </Flex>
-      <FormControl mb="20px">
+      {mainList.map(({ label, text, val }) => {
+        return (
+          <FormControl mb="20px" key={text}>
+            <FormLabel fontSize="18px" fontWeight="bold">
+              {label}
+            </FormLabel>
+            <Input
+              type="number"
+              placeholder={text}
+              size="md"
+              borderColor="gray"
+              h="60px"
+            />
+            <FormHelperText fontSize="14px">{val}</FormHelperText>
+          </FormControl>
+        );
+      })}
+      {/* <FormControl mb="20px">
         <FormLabel fontSize="18px" fontWeight="bold">
           CPU-ს ბირთვი
         </FormLabel>
@@ -138,7 +168,7 @@ const LaptopSpecs = () => {
           h="60px"
         />
         <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
-      </FormControl>
+      </FormControl> */}
       <FormControl as="fieldset" mb="20px">
         <FormLabel fontSize="18px" fontWeight="bold">
           მეხსიერების ტიპი
@@ -183,7 +213,6 @@ const LaptopSpecs = () => {
         </InputGroup>
         <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
       </FormControl>
-
       <FormControl as="fieldset" mb="40px">
         <FormLabel fontSize="18px" fontWeight="bold">
           ლეპტოპის მდგომარეობა

@@ -13,13 +13,70 @@ import {
 import Header from 'components/Header';
 
 const EmployeeInfo = () => {
+  const mainList = [
+    {
+      label: 'სახელი',
+      text: 'გრიშა',
+      val: 'მინიმუმ 2 სიმბოლო, ქართული ასოები',
+    },
+    {
+      label: 'გვარი',
+      text: 'ბაგრატიონი',
+      val: 'მინიმუმ 2 სიმბოლო, ქართული ასოები',
+    },
+  ];
+
   return (
     <Flex direction="column" justify="space-between">
       <Header />
       <Text fontSize="14" color="gray.400" textAlign="center">
         1/2
       </Text>
-      <FormControl mb="20px">
+      {mainList.map(({ label, text, val }) => {
+        return (
+          <FormControl mb="20px" key={label}>
+            <FormLabel fontSize="18px" fontWeight="bold">
+              {label}
+            </FormLabel>
+            <Input
+              type="text"
+              placeholder={text}
+              size="md"
+              borderColor="gray"
+              h="60px"
+            />
+            <FormHelperText fontSize="14px">{val}</FormHelperText>
+          </FormControl>
+        );
+      })}
+      <Flex direction="column" my="20px">
+        <Select
+          bg="gray.200"
+          h="60px"
+          placeholder="თიმი"
+          fontSize="18px"
+          fontWeight="bold"
+          mb="40px"
+        >
+          <option value="option1">დეველოპმენტი</option>
+          <option value="option2">HR</option>
+          <option value="option3">გაყიდვები</option>
+          <option value="option3">მარკეტინგი</option>
+        </Select>
+        <Select
+          bg="gray.200"
+          h="60px"
+          placeholder="პოზიცია"
+          fontSize="18px"
+          fontWeight="bold"
+        >
+          <option value="option1">სენიორი</option>
+          <option value="option2">სტაჟიორი</option>
+          <option value="option3">მიდლი</option>
+          <option value="option3">ლიდი</option>
+        </Select>
+      </Flex>
+      {/* <FormControl mb="20px">
         <FormLabel fontSize="18px" fontWeight="bold">
           სახელი
         </FormLabel>
@@ -48,34 +105,8 @@ const EmployeeInfo = () => {
         <FormHelperText fontSize="14px">
           მინიმუმ 2 სიმბოლო, ქართული ასოები
         </FormHelperText>
-      </FormControl>
-      <Flex direction="column" my="20px">
-        <Select
-          bg="gray.200"
-          h="60px"
-          placeholder="თიმი"
-          fontSize="18px"
-          fontWeight="bold"
-          mb="40px"
-        >
-          <option value="option1">დეველოპმენტი</option>
-          <option value="option2">HR</option>
-          <option value="option3">გაყიდვები</option>
-          <option value="option3">მარკეტინგი</option>
-        </Select>
-        <Select
-          bg="gray.200"
-          h="60px"
-          placeholder="პოზიცია"
-          fontSize="18px"
-          fontWeight="bold"
-        >
-          <option value="option1">სენიორი</option>
-          <option value="option2">სტაჟიორი</option>
-          <option value="option3">მიდლი</option>
-          <option value="option3">ლიდი</option>
-        </Select>
-      </Flex>
+      </FormControl> */}
+
       <FormControl mb="20px">
         <FormLabel fontSize="18px" fontWeight="bold">
           მეილი

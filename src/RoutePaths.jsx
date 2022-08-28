@@ -4,6 +4,7 @@ import EmployeeInfo from 'pages/EmployeeInfo';
 import LaptopSpecs from 'pages/LaptopSpecs';
 import Success from 'pages/Success';
 import List from 'pages/List';
+import Details from 'pages/Details';
 
 const RoutePaths = () => {
   return (
@@ -14,6 +15,7 @@ const RoutePaths = () => {
       <Route path="/laptop-specs" element={<LaptopSpecs />} />
       <Route path="/success" element={<Success />} />
       <Route path="/list" element={<List />} />
+      <Route path="/details" element={<Details />} />
     </Routes>
   );
 };
