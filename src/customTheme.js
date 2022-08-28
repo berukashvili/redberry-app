@@ -4,6 +4,7 @@ const customTheme = extendTheme({
   colors: {
     primary: '#fff',
     secondary: '#62A1EB',
+    'secondary-blue': '#4386A9',
   },
 
   styles: {
@@ -12,6 +13,7 @@ const customTheme = extendTheme({
         color: 'black',
         backgroundColor: 'primary',
       },
+
       option: {
         backgroundColor: 'white',
       },

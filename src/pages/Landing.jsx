@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Image, ButtonGroup, Button } from '@chakra-ui/react';
+import { Box, Flex, Image, Button } from '@chakra-ui/react';
 
 const Landing = () => {
   return (
@@ -7,14 +7,14 @@ const Landing = () => {
       <Box boxSize="112px" mt="64px">
         <Image
           objectFit="cover"
-          src="./images/mobile-logo.png"
+          src="./images/mobile/mobile-logo.png"
           alt="Mobile Header Logo"
         />
       </Box>
       <Box boxSize="268px" mb="132px">
         <Image
           objectFit="cover"
-          src="./images/mobile-hero.png"
+          src="./images/mobile/mobile-hero.png"
           alt="Mobile Hero Image"
         />
       </Box>
@@ -26,10 +26,18 @@ const Landing = () => {
           fontSize="20px"
           mt="100px"
           mb="16px"
+          color="white"
         >
           ჩანაწერის დამატება
         </Button>
-        <Button bg="secondary" px="78px" py="30px" fontSize="20px" mb="32px">
+        <Button
+          bg="secondary"
+          px="78px"
+          py="30px"
+          fontSize="20px"
+          mb="32px"
+          color="white"
+        >
           ჩანაწერების სია
         </Button>
       </Flex>
