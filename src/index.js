@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(container);
 root.render(
   <StrictMode>
     <ChakraProvider theme={customTheme}>
-      <Container>
+      <Container maxW={['', '880']}>
         <App />
       </Container>
     </ChakraProvider>
