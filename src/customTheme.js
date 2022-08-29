@@ -25,6 +25,11 @@ const customTheme = extendTheme({
     heading: `'HelveticaNeue', sans-serif`,
     body: `'HelveticaNeue', sans-serif`,
   },
+
+  breakpoints: {
+    sm: '390px',
+    md: '1920px',
+  },
 });
 
 export default customTheme;
