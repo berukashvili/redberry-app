@@ -5,14 +5,13 @@ import {
   FormControl,
   FormHelperText,
   FormLabel,
-  FormErrorMessage,
   Input,
-  Select,
   Button,
-  Box,
-  Image,
 } from '@chakra-ui/react';
 import Header from 'components/Header';
+import FormInput from 'components/FormInput';
+import SelectInput from 'components/SelectInput';
+import FooterLogo from 'components/FooterLogo';
 
 const EmployeeInfo = () => {
   return (
@@ -27,80 +26,35 @@ const EmployeeInfo = () => {
         1/2
       </Text>
       <Flex direction={['column', 'row']}>
-        <FormControl mb={['20px', '2px']} mr={['', '70px']}>
-          <FormLabel fontSize="18px" fontWeight="bold">
-            სახელი
-          </FormLabel>
-          <Input
-            type="text"
-            placeholder="გრიშა"
-            size="md"
-            borderColor="gray"
-            h="60px"
-          />
-          <FormHelperText fontSize="14px">
-            მინიმუმ 2 სიმბოლო, ქართული ასოები
-          </FormHelperText>
-        </FormControl>
-        <FormControl mb={['20px', '2px']}>
-          <FormLabel fontSize="18px" fontWeight="bold">
-            გვარი
-          </FormLabel>
-          <Input
-            type="text"
-            placeholder="ბაგრატიონი"
-            size="md"
-            borderColor="gray"
-            h="60px"
-          />
-          <FormHelperText fontSize="14px">
-            მინიმუმ 2 სიმბოლო, ქართული ასოები
-          </FormHelperText>
-        </FormControl>
+        <FormInput
+          label="სახელი"
+          placeholder="გრიშა"
+          val="მინიმუმ 2 სიმბოლო, ქართული ასოები"
+          type="text"
+        />
+        <FormInput
+          label="გვარი"
+          placeholder="ბაგრატიონი"
+          val="მინიმუმ 2 სიმბოლო, ქართული ასოები"
+          type="text"
+        />
       </Flex>
       <Flex direction="column" my="20px">
-        <Select
-          bg="gray.200"
-          h="60px"
+        <SelectInput
           placeholder="თიმი"
-          fontSize="18px"
-          fontWeight="bold"
-          mb="40px"
-        >
-          <option value="option1">დეველოპმენტი</option>
-          <option value="option2">HR</option>
-          <option value="option3">გაყიდვები</option>
-          <option value="option3">მარკეტინგი</option>
-        </Select>
-        <Select
-          bg="gray.200"
-          h="60px"
-          placeholder="პოზიცია"
-          fontSize="18px"
-          fontWeight="bold"
-        >
-          <option value="option1">სენიორი</option>
-          <option value="option2">სტაჟიორი</option>
-          <option value="option3">მიდლი</option>
-          <option value="option3">ლიდი</option>
-        </Select>
-      </Flex>
-
-      <FormControl mb={['20px', '2px']}>
-        <FormLabel fontSize="18px" fontWeight="bold">
-          მეილი
-        </FormLabel>
-        <Input
-          type="email"
-          placeholder="grish666@redberry.ge"
-          size="md"
-          borderColor="gray"
-          h="60px"
+          list={['დეველოპმენტი', 'HR', 'გაყიდვები', 'მარკეტინგი']}
         />
-        <FormHelperText fontSize="14px">
-          უნდა მთავრდებოდეს @redberry.ge-ით
-        </FormHelperText>
-      </FormControl>
+        <SelectInput
+          placeholder="პოზიცია"
+          list={['სენიორი', 'ინტერნი', 'მიდლი', 'ლიდი']}
+        />
+      </Flex>
+      <FormInput
+        label="მეილი"
+        placeholder="grish666@redberry.ge"
+        val="უნდა მთავრდებოდეს @redberry.ge-ით"
+        type="email"
+      />
       <FormControl mb={['20px', '2px']}>
         <FormLabel fontSize="18px" fontWeight="bold">
           ტელეფონის ნომერი
@@ -127,18 +81,7 @@ const EmployeeInfo = () => {
       >
         შემდეგი
       </Button>
-      <Box
-        boxSize="85px"
-        mb="45px"
-        ml={['', '50%']}
-        display={['none', 'inline']}
-      >
-        <Image
-          objectFit="cover"
-          src="./images/desktop-footer-logo.png"
-          alt="mobile hero image"
-        />
-      </Box>
+      <FooterLogo />
     </Flex>
   );
 };

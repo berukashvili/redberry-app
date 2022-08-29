@@ -1,233 +1,97 @@
 import React from 'react';
 import {
   Flex,
-  HStack,
-  Heading,
   Text,
-  Box,
-  Image,
   FormControl,
   FormHelperText,
   FormLabel,
-  FormErrorMessage,
   Input,
   InputGroup,
   InputRightElement,
-  Select,
   Button,
-  IconButton,
-  RadioGroup,
-  Radio,
 } from '@chakra-ui/react';
 import Header from 'components/Header';
+import ImageBtn from 'components/ImageBtn';
+import FormInput from 'components/FormInput';
+import SelectInput from 'components/SelectInput';
+import RadioInput from 'components/RadioInput';
 
 const LaptopSpecs = () => {
-  const mainList = [
-    {
-      label: 'CPU-ს ბირთვი',
-      text: '14',
-      val: 'მხოლოდ ციფრები',
-    },
-    {
-      label: 'CPU-ს ნაკადი',
-      text: '365',
-      val: 'მხოლოდ ციფრები',
-    },
-    {
-      label: 'ლეპტოპის RAM (GB)',
-      text: '16',
-      val: 'მხოლოდ ციფრები',
-    },
-  ];
-
   return (
     <Flex direction="column" justify="space-between">
       <Header />
       <Text fontSize="14" color="gray.400" textAlign="center" mb="30px">
         2/2
       </Text>
-      <Button h="100%" bg="none">
-        <Flex direction="column" align="center" position="relative" mb="40px">
-          <Box boxSize="100%">
-            <Image
-              objectFit="cover"
-              src="./images/mobile-rectangle.png"
-              alt="mobile image upload rectangle"
-            />
-          </Box>
-          <Box position="absolute" top="52px">
-            <Flex direction="column" align="center" position="relative">
-              <Box mb="30px">
-                <Image
-                  objectFit="cover"
-                  src="./images/mobile-image-icon.png"
-                  alt="mobile upload icon"
-                />
-              </Box>
-              <Text color="secondary-blue" fontSize="16px">
-                ლეპტოპის ფოტოს ატვირთვა
-              </Text>
-            </Flex>
-          </Box>
-        </Flex>
-      </Button>
-      <FormControl mb="20px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          ლეპტოპის სახელი
-        </FormLabel>
-        <Input
-          type="text"
+      <ImageBtn />
+      <Flex direction={['column', 'row']} align={['', 'center']}>
+        <FormInput
+          label="ლეპტოპის სახელი"
           placeholder="HP"
-          size="md"
-          borderColor="gray"
-          h="60px"
+          val="ლათინური ასოები, ციფრები, !@#$%^&*()_+="
+          type="text"
         />
-        <FormHelperText fontSize="14px">
-          ლათინური ასოები, ციფრები, !@#$%^&*()_+=
-        </FormHelperText>
-      </FormControl>
-      <Flex direction="column" my="20px">
-        <Select
-          bg="gray.200"
-          h="60px"
+        <SelectInput
           placeholder="ლეპტოპის ბრენდი"
-          fontSize="18px"
-          fontWeight="bold"
-          mb="70px"
-        >
-          <option value="option1">დეველოპმენტი</option>
-          <option value="option2">HR</option>
-          <option value="option3">გაყიდვები</option>
-          <option value="option3">მარკეტინგი</option>
-        </Select>
-        <Select
-          bg="gray.200"
-          h="60px"
-          placeholder="CPU"
-          fontSize="18px"
-          fontWeight="bold"
-        >
-          <option value="option1">სენიორი</option>
-          <option value="option2">სტაჟიორი</option>
-          <option value="option3">მიდლი</option>
-          <option value="option3">ლიდი</option>
-        </Select>
+          list={['Acer', 'Lenovo', 'Asus', 'Apple']}
+        />
       </Flex>
-      {mainList.map(({ label, text, val }) => {
-        return (
-          <FormControl mb="20px" key={text}>
-            <FormLabel fontSize="18px" fontWeight="bold">
-              {label}
-            </FormLabel>
+      <Flex direction={['column', 'row']}>
+        <SelectInput
+          placeholder="CPU"
+          list={['Intel', 'AMD', 'Applle', 'Qualcomm']}
+        />
+        <FormInput
+          label="CPU-ს ბირთვი"
+          placeholder="14"
+          val="ლათინური ასოები, ციფრები, !@#$%^&*()_+="
+          type="number"
+        />
+        <FormInput
+          label="CPU-ს ნაკადი"
+          placeholder="365"
+          val="მხოლოდ ციფრები"
+          type="number"
+        />
+      </Flex>
+      <Flex direction={['column', 'row']}>
+        <FormInput
+          label="ლეპტოპის RAM (GB)"
+          placeholder="16"
+          val="მხოლოდ ციფრები"
+          type="number"
+        />
+        <RadioInput label="მეხსიერების ტიპი" value1="SSD" value2="HDD" />
+      </Flex>
+      <Flex direction={['column', 'row']}>
+        <FormInput
+          label="შეძენის რიცხვი (არჩევითი)"
+          placeholder="დდ/თთ/წწწწ"
+          val="მხოლოდ ციფრები"
+          type="datetime"
+        />
+        <FormControl mb="20px">
+          <FormLabel fontSize="18px" fontWeight="bold">
+            ლეპტოპის ფასი
+          </FormLabel>
+          <InputGroup>
             <Input
               type="number"
-              placeholder={text}
+              placeholder="16"
               size="md"
               borderColor="gray"
               h="60px"
             />
-            <FormHelperText fontSize="14px">{val}</FormHelperText>
-          </FormControl>
-        );
-      })}
-      {/* <FormControl mb="20px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          CPU-ს ბირთვი
-        </FormLabel>
-        <Input
-          type="number"
-          placeholder="14"
-          size="md"
-          borderColor="gray"
-          h="60px"
-        />
-        <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
-      </FormControl>
-      <FormControl mb="20px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          CPU-ს ნაკადი
-        </FormLabel>
-        <Input
-          type="number"
-          placeholder="365"
-          size="md"
-          borderColor="gray"
-          h="60px"
-        />
-        <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
-      </FormControl>
-      <FormControl mb="20px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          ლეპტოპის RAM (GB)
-        </FormLabel>
-        <Input
-          type="number"
-          placeholder="16"
-          size="md"
-          borderColor="gray"
-          h="60px"
-        />
-        <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
-      </FormControl> */}
-      <FormControl as="fieldset" mb="20px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          მეხსიერების ტიპი
-        </FormLabel>
-        <RadioGroup>
-          <HStack spacing="24px">
-            <Radio value="Sasuke" fontSize="bold">
-              SSD
-            </Radio>
-            <Radio value="Nagato" fontSize="bold">
-              HDD
-            </Radio>
-          </HStack>
-        </RadioGroup>
-      </FormControl>
-      <FormControl mt="20px" mb="20px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          შეძენის რიცხვი (არჩევითი)
-        </FormLabel>
-        <Input
-          type="datetime"
-          placeholder="დდ/თთ/წწწწ"
-          size="md"
-          borderColor="gray"
-          h="60px"
-        />
-        <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
-      </FormControl>
-      <FormControl mb="20px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          ლეპტოპის ფასი
-        </FormLabel>
-        <InputGroup>
-          <Input
-            type="number"
-            placeholder="16"
-            size="md"
-            borderColor="gray"
-            h="60px"
-          />
-          <InputRightElement children={'₾'} top="9px" />
-        </InputGroup>
-        <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
-      </FormControl>
-      <FormControl as="fieldset" mb="40px">
-        <FormLabel fontSize="18px" fontWeight="bold">
-          ლეპტოპის მდგომარეობა
-        </FormLabel>
-        <RadioGroup>
-          <HStack spacing="24px">
-            <Radio value="Sasuke" fontSize="bold">
-              ახალი
-            </Radio>
-            <Radio value="Nagato" fontSize="bold">
-              მეორადი
-            </Radio>
-          </HStack>
-        </RadioGroup>
-      </FormControl>
+            <InputRightElement children={'₾'} top="9px" />
+          </InputGroup>
+          <FormHelperText fontSize="14px">მხოლოდ ციფრები</FormHelperText>
+        </FormControl>
+      </Flex>
+      <RadioInput
+        label="ლეპტოპის მდგომარეობა"
+        value1="ახალი"
+        value2="მეორადი"
+      />
       <Flex justify="space-between" align="center">
         <Button color="secondary" variant="unstyled" fontSize="18px" mb="32px">
           უკან
