@@ -9,7 +9,11 @@ import FooterLogo from 'components/FooterLogo';
 const UserInfo = () => {
   return (
     <Flex direction="column" justify="space-between" h={['', '100vh']}>
-      <Header />
+      <Header
+        text1="ლეპტოპის მახასიათებლები"
+        text2="თანამშრომლების ინფო"
+        fontSize="20px"
+      />
       <Text
         fontSize="14"
         color="gray.400"

@@ -1,10 +1,10 @@
 import React from 'react';
-import { IconButton, Flex, Heading, Box } from '@chakra-ui/react';
+import { IconButton, Flex, Heading } from '@chakra-ui/react';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 
-const Header = () => {
+const Header = ({ display, fontSize, text1, text2, mr }) => {
   return (
-    <Box mb={['', '50px']}>
+    <Flex mb={['50px', '90px']} align="center">
       <IconButton
         variant="unstyled"
         position="absolute"
@@ -18,26 +18,23 @@ const Header = () => {
       <Flex
         direction={['column', 'row']}
         justify={['', 'center']}
+        w="100%"
         align="center"
         mt="30px"
         mb="10px"
       >
-        <Heading
-          fontSize={['16px', '20px']}
-          textAlign="center"
-          mr={['', '70px']}
-        >
-          ლეპტოპის მახასიათებლები
+        <Heading fontSize={fontSize} textAlign="center" mr={['', '100px']}>
+          {text1}
         </Heading>
         <Heading
           fontSize={['16px', '20px']}
           textAlign="center"
-          display={['none', 'inline']}
+          display={display}
         >
-          ლეპტოპის მახასიათებლები
+          {text2}
         </Heading>
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 

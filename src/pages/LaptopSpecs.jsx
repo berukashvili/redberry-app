@@ -19,7 +19,11 @@ import MainBtn from 'components/MainBtn';
 const LaptopSpecs = () => {
   return (
     <Flex direction="column" justify="space-between">
-      <Header />
+      <Header
+        text1="ლეპტოპის მახასიათებლები"
+        text2="ლეპტოპის მახასიათებლები"
+        fontSize="20px"
+      />
       <Text fontSize="14" color="gray.400" textAlign="center" mb="30px">
         2/2
       </Text>

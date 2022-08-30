@@ -10,9 +10,11 @@ const ListItem = () => {
       borderRadius="10px"
       border="1px"
       borderColor="secondary-blue"
-      mt="30px"
+      mb={['20px', '50px']}
+      w={['', '405px']}
+      h={['', '150px']}
     >
-      <Box m="5px">
+      <Box m="5px" w={['45%', '50%']}>
         <Image
           objectFit="cover"
           src="./images/device.png"
