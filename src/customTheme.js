@@ -6,6 +6,7 @@ const customTheme = extendTheme({
     secondary: '#62A1EB',
     'secondary-blue': '#4386A9',
     'secondary-bg': '#EAFAFF',
+    'bg-gray': '#4A4A4A',
   },
 
   styles: {
