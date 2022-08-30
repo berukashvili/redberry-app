@@ -7,9 +7,9 @@ import {
   HStack,
 } from '@chakra-ui/react';
 
-const RadioInput = ({ label, value1, value2 }) => {
+const RadioInput = ({ label, value1, value2, w }) => {
   return (
-    <FormControl as="fieldset" mb="20px">
+    <FormControl as="fieldset" mb="40px" w={w}>
       <FormLabel fontSize="18px" fontWeight="bold">
         {label}
       </FormLabel>

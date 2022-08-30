@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Flex, Image, Button } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
+import Picture from 'components/Picture';
+import MainBtn from 'components/MainBtn';
 
 const Landing = () => {
   return (
@@ -9,29 +11,21 @@ const Landing = () => {
       justify={['', 'center']}
       align="center"
     >
-      <Box boxSize="112px" mt="64px">
-        <Image
-          objectFit="cover"
-          src="./images/mobile-logo.png"
-          alt="mobile header logo"
-        />
-      </Box>
-      <Box boxSize="268px" mb="132px" display={['', 'none']}>
-        <Image
-          objectFit="cover"
-          src="./images/mobile-hero.png"
-          alt="mobile hero image"
-        />
-      </Box>
-      <Box boxSize="780px" mt="100px" display={['none', 'inline']}>
-        <Image
-          objectFit="cover"
-          src="./images/desktop-hero.png"
-          alt="mobile hero image"
-        />
-      </Box>
+      <Picture boxSize="112px" mt="64px" src="./images/mobile-logo.png" />
+      <Picture
+        boxSize="268px"
+        mb="132px"
+        display={['inline', 'none']}
+        src="./images/mobile-hero.png"
+      />
+      <Picture
+        boxSize="780px"
+        mt="100px"
+        display={['none', 'inline']}
+        src="./images/desktop-hero.png"
+      />
       <Flex direction="column" mb={['', '120px']}>
-        <Button
+        <MainBtn
           bg="secondary"
           px={['78px', '92px']}
           py="30px"
@@ -39,19 +33,17 @@ const Landing = () => {
           mt="100px"
           mb="16px"
           color="white"
-        >
-          ჩანაწერის დამატება
-        </Button>
-        <Button
+          text="ჩანაწერის დამატება"
+        />
+        <MainBtn
           bg="secondary"
           px="78px"
           py="30px"
           fontSize="20px"
           mb="32px"
           color="white"
-        >
-          ჩანაწერების სია
-        </Button>
+          text="ჩანაწერების სია"
+        />
       </Flex>
     </Flex>
   );

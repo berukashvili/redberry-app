@@ -1,19 +1,12 @@
 import React from 'react';
-import {
-  Flex,
-  Text,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Input,
-  Button,
-} from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import Header from 'components/Header';
 import FormInput from 'components/FormInput';
 import SelectInput from 'components/SelectInput';
+import MainBtn from 'components/MainBtn';
 import FooterLogo from 'components/FooterLogo';
 
-const EmployeeInfo = () => {
+const UserInfo = () => {
   return (
     <Flex direction="column" justify="space-between" h={['', '100vh']}>
       <Header />
@@ -25,24 +18,28 @@ const EmployeeInfo = () => {
       >
         1/2
       </Text>
-      <Flex direction={['column', 'row']}>
+      <Flex direction={['column', 'row']} justify="space-between">
         <FormInput
           label="სახელი"
           placeholder="გრიშა"
           val="მინიმუმ 2 სიმბოლო, ქართული ასოები"
           type="text"
+          mb="6px"
+          w={['100%', '390px']}
         />
         <FormInput
           label="გვარი"
           placeholder="ბაგრატიონი"
           val="მინიმუმ 2 სიმბოლო, ქართული ასოები"
           type="text"
+          w={['100%', '390px']}
         />
       </Flex>
       <Flex direction="column" my="20px">
         <SelectInput
           placeholder="თიმი"
           list={['დეველოპმენტი', 'HR', 'გაყიდვები', 'მარკეტინგი']}
+          mb={['70px', '50px']}
         />
         <SelectInput
           placeholder="პოზიცია"
@@ -55,22 +52,13 @@ const EmployeeInfo = () => {
         val="უნდა მთავრდებოდეს @redberry.ge-ით"
         type="email"
       />
-      <FormControl mb={['20px', '2px']}>
-        <FormLabel fontSize="18px" fontWeight="bold">
-          ტელეფონის ნომერი
-        </FormLabel>
-        <Input
-          type="number"
-          placeholder="+995 598 00 07 01"
-          size="md"
-          borderColor="gray"
-          h="60px"
-        />
-        <FormHelperText fontSize="14px">
-          ქართული მობ-ნომრის ფორმატი
-        </FormHelperText>
-      </FormControl>
-      <Button
+      <FormInput
+        label="ტელეფონის ნომერი"
+        placeholder="+995 598 00 07 01"
+        val=" ქართული მობ-ნომრის ფორმატი"
+        type="number"
+      />
+      <MainBtn
         color="white"
         bg="secondary"
         px={['28px', '52px']}
@@ -78,12 +66,11 @@ const EmployeeInfo = () => {
         fontSize="18px"
         mb={['32px', '2px']}
         ml="auto"
-      >
-        შემდეგი
-      </Button>
+        text="შემდეგი"
+      ></MainBtn>
       <FooterLogo />
     </Flex>
   );
 };
 
-export default EmployeeInfo;
+export default UserInfo;

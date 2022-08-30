@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select } from '@chakra-ui/react';
 
-const SelectInput = ({ placeholder, list }) => {
+const SelectInput = ({ placeholder, list, mt, mr, ml, mb, w }) => {
   return (
     <Select
       bg="gray.200"
@@ -9,7 +9,10 @@ const SelectInput = ({ placeholder, list }) => {
       placeholder={placeholder}
       fontSize="18px"
       fontWeight="bold"
-      mb="70px"
+      mt={mt}
+      mr={mr}
+      mb="40px"
+      w={w}
     >
       {list.map(text => {
         return <option key={text}>{text}</option>;

@@ -6,9 +6,9 @@ import {
   FormHelperText,
 } from '@chakra-ui/react';
 
-const FormInput = ({ label, placeholder, val, type }) => {
+const FormInput = ({ label, placeholder, val, type, w, ml, mb }) => {
   return (
-    <FormControl mb="20px">
+    <FormControl ml={ml} mb="40px" w={w}>
       <FormLabel fontSize="18px" fontWeight="bold">
         {label}
       </FormLabel>

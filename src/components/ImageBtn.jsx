@@ -16,7 +16,7 @@ const ImageBtn = () => {
           boxSize="100%"
           src="./images/desktop-rectangle.png"
         />
-        <Box position="absolute" top="52px">
+        <Box position="absolute" top={['52px', '35%']}>
           <Flex direction="column" align="center" position="relative">
             <Picture src="./images/mobile-image-icon.png" mb="30px" />
             <Text color="secondary-blue" fontSize="16px">
