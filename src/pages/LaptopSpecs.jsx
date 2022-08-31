@@ -21,7 +21,7 @@ const LaptopSpecs = () => {
     <Flex direction="column" justify="space-between">
       <Header
         text1="ლეპტოპის მახასიათებლები"
-        text2="ლეპტოპის მახასიათებლები"
+        text2="თანამშრომლების ინფო"
         fontSize="20px"
       />
       <Text fontSize="14" color="gray.400" textAlign="center" mb="30px">
