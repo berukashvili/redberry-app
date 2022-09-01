@@ -4,7 +4,7 @@ import Picture from './Picture';
 
 const ImageBtn = () => {
   return (
-    <Button h="100%" bg="none" px="0">
+    <Button h="100%" bg="none" px="0" variant="unstyled">
       <Flex direction="column" align="center" position="relative" mb="40px">
         <Picture
           display={['inline', 'none']}

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Flex,
-  Text,
+  Button,
   FormControl,
   FormHelperText,
   FormLabel,
@@ -15,18 +15,12 @@ import FormInput from 'components/FormInput';
 import SelectInput from 'components/SelectInput';
 import RadioInput from 'components/RadioInput';
 import MainBtn from 'components/MainBtn';
+import FooterLogo from 'components/FooterLogo';
 
 const LaptopSpecs = () => {
   return (
     <Flex direction="column" justify="space-between">
-      <Header
-        text1="ლეპტოპის მახასიათებლები"
-        text2="თანამშრომლების ინფო"
-        fontSize="20px"
-      />
-      <Text fontSize="14" color="gray.400" textAlign="center" mb="30px">
-        2/2
-      </Text>
+      <Header display1={['none', 'inline']} />
       <ImageBtn />
       <Flex
         direction={['column', 'row']}
@@ -125,13 +119,9 @@ const LaptopSpecs = () => {
         value2="მეორადი"
       />
       <Flex justify="space-between" align="center">
-        <MainBtn
-          color="secondary"
-          variant="unstyled"
-          fontSize="18px"
-          mb="32px"
-          text="უკან"
-        />
+        <Button color="secondary" variant="unstyled" fontSize="18px" mb="32px">
+          უკან
+        </Button>
         <MainBtn
           color="white"
           bg="secondary"
@@ -142,6 +132,7 @@ const LaptopSpecs = () => {
           text="დამახსოვრება"
         ></MainBtn>
       </Flex>
+      <FooterLogo />
     </Flex>
   );
 };

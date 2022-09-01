@@ -1,15 +1,17 @@
 import React from 'react';
-import { Box, Image } from '@chakra-ui/react';
+import { Flex, Box, Image } from '@chakra-ui/react';
 
 const FooterLogo = () => {
   return (
-    <Box boxSize="85px" mb="45px" ml={['', '50%']} display={['none', 'inline']}>
-      <Image
-        objectFit="cover"
-        src="./images/desktop-footer-logo.png"
-        alt="mobile hero image"
-      />
-    </Box>
+    <Flex mb="45px" w="100%" justify="center">
+      <Box boxSize="85px" display={['none', 'inline']}>
+        <Image
+          objectFit="cover"
+          src="./images/desktop-footer-logo.png"
+          alt="mobile hero image"
+        />
+      </Box>
+    </Flex>
   );
 };
 

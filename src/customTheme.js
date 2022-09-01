@@ -7,6 +7,7 @@ const customTheme = extendTheme({
     'secondary-blue': '#4386A9',
     'secondary-bg': '#EAFAFF',
     'bg-gray': '#4A4A4A',
+    'bg-gray-secondary': '#D9D9D9',
   },
 
   styles: {
@@ -30,6 +31,11 @@ const customTheme = extendTheme({
   breakpoints: {
     sm: '390px',
     md: '1920px',
+  },
+  components: {
+    Button: { baseStyle: { _focus: { boxShadow: 'none' } } },
+    Button: { baseStyle: { _hover: { backgroundColor: 'none' } } },
+    Link: { baseStyle: { _focus: { boxShadow: 'none' } } },
   },
 });
 

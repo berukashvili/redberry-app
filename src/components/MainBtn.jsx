@@ -16,6 +16,7 @@ const MainBtn = ({
   return (
     <Button
       color={color}
+      _hover={{ bg: 'secondary-blue' }}
       bg={bg}
       px={px}
       py={py}
