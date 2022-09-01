@@ -20,7 +20,11 @@ import FooterLogo from 'components/FooterLogo';
 const LaptopSpecs = () => {
   return (
     <Flex direction="column" justify="space-between">
-      <Header display1={['none', 'inline']} />
+      <Header
+        text1="მომხმარებლის ინფო"
+        text2="ლეპტოპის მახასიათებლები"
+        display1={['none', 'inline']}
+      />
       <ImageBtn />
       <Flex
         direction={['column', 'row']}

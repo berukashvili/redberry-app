@@ -25,10 +25,13 @@ const ListItem = () => {
         <Text fontSize="14px" fontWeight="500">
           ირინე ჩანქსელიანი
         </Text>
-        <Text fontSize="18px">Pentium II</Text>
+        <Text fontSize="18px" fontWeight="400">
+          Pentium II
+        </Text>
         <Link
           color="secondary-blue"
           fontSize="14px"
+          fontWeight="400"
           textDecoration="underline"
           mt="8px"
         >

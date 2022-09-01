@@ -2,11 +2,13 @@ import React from 'react';
 import { IconButton, Flex, Heading, Text } from '@chakra-ui/react';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { useLocation } from 'react-router-dom';
-const Header = ({ display1, display2, mr }) => {
+
+const Header = ({ display1, display2, text1, text2 }) => {
   const { pathname } = useLocation();
   const pageCount = pathname === '/user-info' ? '1/2' : '2/2';
+
   return (
-    <Flex direction={['column', 'row']} mb={['20px', '25px']} align="center">
+    <Flex direction={['column', 'row']} mb={['20px', '75px']} align="center">
       <IconButton
         variant="unstyled"
         position="absolute"
@@ -30,16 +32,18 @@ const Header = ({ display1, display2, mr }) => {
         <Heading
           display={display1}
           fontSize={['16px', '20px']}
+          fontWeight="700"
           textAlign="center"
         >
-          თანამშრომლების ინფო
+          {text1}
         </Heading>
         <Heading
+          display={display2}
           fontSize={['16px', '20px']}
           textAlign="center"
-          display={display2}
+          fontWeight="700"
         >
-          ლეპტოპის მახასიათებლები
+          {text2}
         </Heading>
       </Flex>
       <Text

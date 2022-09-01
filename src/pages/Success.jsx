@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Flex, Button, Text } from '@chakra-ui/react';
 import Picture from 'components/Picture';
+import MainBtn from 'components/MainBtn';
 
 const Success = () => {
   return (
@@ -31,7 +32,8 @@ const Success = () => {
         borderRadius="8px"
       />
       <Flex direction="column">
-        <Button
+        <MainBtn
+          text="სიაში გადაყვანა"
           bg="secondary"
           px="78px"
           py="30px"
@@ -40,9 +42,7 @@ const Success = () => {
           mb="16px"
           color="white"
           zIndex="1"
-        >
-          სიაში გადაყვანა
-        </Button>
+        />
         <Button
           bg="none"
           px="78px"
@@ -51,6 +51,7 @@ const Success = () => {
           mb="32px"
           color="secondary-blue"
           zIndex="1"
+          _hover={{ bg: 'secondary-blue', color: 'white' }}
         >
           მთავარი
         </Button>

@@ -12,6 +12,8 @@ const MainBtn = ({
   mb,
   ml,
   text,
+  zIndex,
+  hoverColor,
 }) => {
   return (
     <Button
@@ -21,10 +23,12 @@ const MainBtn = ({
       px={px}
       py={py}
       fontSize={fontSize}
+      fontWeight="500"
       mb={mb}
       ml={ml}
       mt={mt}
       variant={variant}
+      zIndex={zIndex}
     >
       {text}
     </Button>

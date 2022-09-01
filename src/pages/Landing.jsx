@@ -11,16 +11,20 @@ const Landing = () => {
       justify={['', 'center']}
       align="center"
     >
-      <Picture boxSize="112px" mt="64px" src="./images/mobile-logo.png" />
+      <Picture
+        mt={['64px', '100px']}
+        mb="100px"
+        src="./images/mobile-logo.png"
+      />
       <Picture
         boxSize="268px"
-        mb="132px"
+        mb="80px"
         display={['inline', 'none']}
         src="./images/mobile-hero.png"
       />
       <Picture
         boxSize="780px"
-        mt="100px"
+        mt={['100px', '0']}
         display={['none', 'inline']}
         src="./images/desktop-hero.png"
       />

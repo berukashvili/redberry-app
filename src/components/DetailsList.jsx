@@ -14,10 +14,20 @@ const DetailsList = ({ index, justify, w, w2, mr, mb, ml }) => {
       {itemList[index].map((item, i) => {
         return (
           <Flex justify={justify} w={w} key={i}>
-            <Text fontSize={['14px', '22px']} mr={mr} mb={['6px', '16px']}>
+            <Text
+              fontSize={['14px', '22px']}
+              fontWeight="500"
+              mr={mr}
+              mb={['6px', '16px']}
+            >
               {item}
             </Text>
-            <Text fontSize={['14px', '22px']} color="gray.500" ml={ml}>
+            <Text
+              fontSize={['14px', '22px']}
+              fontWeight="400"
+              color="gray.500"
+              ml={ml}
+            >
               ტესტი
             </Text>
           </Flex>

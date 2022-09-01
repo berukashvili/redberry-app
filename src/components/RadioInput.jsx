@@ -15,10 +15,10 @@ const RadioInput = ({ label, value1, value2, w }) => {
       </FormLabel>
       <RadioGroup>
         <HStack spacing="24px">
-          <Radio value="Sasuke" fontSize="bold">
+          <Radio fontSize="16px" fontWeight="500">
             {value1}
           </Radio>
-          <Radio value="Nagato" fontSize="bold">
+          <Radio fontSize="16px" fontWeight="500">
             {value2}
           </Radio>
         </HStack>

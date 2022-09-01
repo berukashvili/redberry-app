@@ -9,8 +9,11 @@ import FooterLogo from 'components/FooterLogo';
 const UserInfo = () => {
   return (
     <Flex direction="column" justify="space-between" h={['', '100vh']}>
-      <Header display2={['none', 'inline']} />
-
+      <Header
+        text1="მომხმარებლის ინფო"
+        text2="ლეპტოპის მახასიათებლები"
+        display2={['none', 'inline']}
+      />
       <Flex direction={['column', 'row']} justify="space-between">
         <FormInput
           label="სახელი"

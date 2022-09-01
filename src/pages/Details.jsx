@@ -1,13 +1,33 @@
 import React from 'react';
-import { Flex, Divider } from '@chakra-ui/react';
-import Header from 'components/Header';
+import { Flex, Divider, Text, IconButton } from '@chakra-ui/react';
 import Picture from 'components/Picture';
 import DetailsList from 'components/DetailsList';
+import { ChevronLeftIcon } from '@chakra-ui/icons';
 
 const Details = () => {
   return (
-    <Flex direction="column" align="center">
-      <Header text1="ლეპტოპის ინფო" />
+    <Flex direction="column" align="center" mt={['30px', '50px']}>
+      <Flex align="center">
+        <IconButton
+          variant="unstyled"
+          position="absolute"
+          top="0px"
+          left="2px"
+          icon={<ChevronLeftIcon w="32px" h="32px" />}
+          size="lg"
+          ml={['', '70px']}
+          bg={['', 'bg-gray-secondary']}
+          borderRadius="50%"
+        />
+        <Text
+          fontSize={['16px', '34px']}
+          textAlign="center"
+          fontWeight="700"
+          mb={['40px', '70px']}
+        >
+          ჩანაწერების სია
+        </Text>
+      </Flex>
       <Flex direction={['column', 'row']} align="center" w="100%">
         <Picture
           src="./images/mobile-details-hero.png"
