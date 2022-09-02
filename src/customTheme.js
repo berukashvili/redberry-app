@@ -34,7 +34,6 @@ const customTheme = extendTheme({
   },
   components: {
     Button: { baseStyle: { _focus: { boxShadow: 'none' } } },
-    Button: { baseStyle: { _hover: { backgroundColor: 'none' } } },
     Link: { baseStyle: { _focus: { boxShadow: 'none' } } },
   },
 });

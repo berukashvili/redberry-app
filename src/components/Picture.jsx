@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Image } from '@chakra-ui/react';
+import { Flex, Image } from '@chakra-ui/react';
 
 const Picture = ({ display, boxSize, src, mb, mt, zIndex }) => {
   return (
