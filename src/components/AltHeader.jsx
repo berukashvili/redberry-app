@@ -2,8 +2,7 @@ import React from 'react';
 import { Flex, Text, IconButton } from '@chakra-ui/react';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 
-const AltHeader = ({ luka, mt, mb }) => {
-  console.log(mt);
+const AltHeader = ({ mt, mb }) => {
   return (
     <Flex align="center">
       <IconButton

@@ -8,11 +8,16 @@ const Header = ({ display1, display2, text1, text2 }) => {
   const pageCount = pathname === '/user-info' ? '1/2' : '2/2';
 
   return (
-    <Flex direction={['column', 'row']} mb={['20px', '75px']} align="center">
+    <Flex
+      direction={['column', 'row']}
+      mt={['0', '35px']}
+      mb={['20px', '75px']}
+      align="center"
+    >
       <IconButton
         variant="unstyled"
         position="absolute"
-        top="18px"
+        top={['18px', '55px']}
         left="2px"
         icon={<ChevronLeftIcon w="32px" h="32px" />}
         size="lg"
