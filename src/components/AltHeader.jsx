@@ -1,21 +1,25 @@
 import React from 'react';
-import { Flex, Text, IconButton } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Flex, Text, Link } from '@chakra-ui/react';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 
-const AltHeader = ({ mt, mb }) => {
+const AltHeader = ({ mt, mb, to }) => {
   return (
     <Flex align="center">
-      <IconButton
+      <Link
         variant="unstyled"
         position="absolute"
-        top="0px"
+        top={['0px', '6px']}
         left="2px"
-        icon={<ChevronLeftIcon w="32px" h="32px" />}
-        size="lg"
+        p="8px"
         ml={['', '70px']}
         bg={['', 'bg-gray-secondary']}
         borderRadius="50%"
-      />
+        as={RouterLink}
+        to={to}
+      >
+        {<ChevronLeftIcon w="32px" h="32px" />}
+      </Link>
       <Text
         fontSize={['16px', '34px']}
         textAlign="center"

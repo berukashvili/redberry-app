@@ -6,7 +6,7 @@ import AltHeader from 'components/AltHeader';
 const EntryList = () => {
   return (
     <Flex direction="column" justify="center" mt={['30px', '50px']}>
-      <AltHeader mt={['10px', '0']} mb={['40px', '100px']} />
+      <AltHeader mt={['10px', '0']} mb={['40px', '100px']} to="/landing" />
       <Flex direction="column" justify={['', 'center']} align="center">
         <List />
       </Flex>

@@ -7,7 +7,7 @@ import AltHeader from 'components/AltHeader';
 const Details = () => {
   return (
     <Flex direction="column" align="center" mt={['30px', '50px']}>
-      <AltHeader mt={['10px', '0']} mb={['40px', '70px']} />
+      <AltHeader mt={['10px', '0']} mb={['40px', '70px']} to="/entry-list" />
       <Flex direction={['column', 'row']} align="center" w="100%">
         <Picture
           src="./images/mobile-details-hero.png"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex } from '@chakra-ui/react';
+import MainLink from 'components/MainLink';
 import Picture from 'components/Picture';
-import MainBtn from 'components/MainBtn';
 
 const Landing = () => {
   return (
@@ -18,7 +18,7 @@ const Landing = () => {
       />
       <Picture
         boxSize="268px"
-        mb="80px"
+        mb="180px"
         display={['inline', 'none']}
         src="./images/mobile-hero.png"
       />
@@ -28,25 +28,26 @@ const Landing = () => {
         display={['none', 'inline']}
         src="./images/desktop-hero.png"
       />
-      <Flex direction="column" mb={['', '120px']}>
-        <MainBtn
+      <Flex direction="column" align="center" mb={['', '120px']} w="100%">
+        <MainLink
           bg="secondary"
-          px={['78px', '92px']}
-          py="30px"
-          fontSize="20px"
-          mt="100px"
-          mb="16px"
-          color="white"
-          text="ჩანაწერის დამატება"
-        />
-        <MainBtn
-          bg="secondary"
-          px="78px"
-          py="30px"
-          fontSize="20px"
+          w={['100%', '45%']}
+          px={['0', '78px']}
+          py="15px"
           mb="32px"
           color="white"
+          to="/user-info"
+          text="ჩანაწერის დამატება"
+        />
+        <MainLink
+          bg="secondary"
+          w={['100%', '45%']}
+          px={['0', '78px']}
+          py="15px"
           text="ჩანაწერების სია"
+          mb="32px"
+          color="white"
+          to="/entry-list"
         />
       </Flex>
     </Flex>

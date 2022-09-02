@@ -13,7 +13,6 @@ const MainBtn = ({
   ml,
   text,
   zIndex,
-  hoverColor,
 }) => {
   return (
     <Button

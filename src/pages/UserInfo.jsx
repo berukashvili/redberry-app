@@ -1,9 +1,9 @@
 import React from 'react';
 import { Flex } from '@chakra-ui/react';
+import MainLink from 'components/MainLink';
 import MainHeader from 'components/MainHeader';
 import FormInput from 'components/FormInput';
 import SelectInput from 'components/SelectInput';
-import MainBtn from 'components/MainBtn';
 import FooterLogo from 'components/FooterLogo';
 
 const UserInfo = () => {
@@ -13,6 +13,7 @@ const UserInfo = () => {
         text1="მომხმარებლის ინფო"
         text2="ლეპტოპის მახასიათებლები"
         display2={['none', 'inline']}
+        to="/landing"
       />
       <Flex direction={['column', 'row']} justify="space-between">
         <FormInput
@@ -54,16 +55,15 @@ const UserInfo = () => {
         val=" ქართული მობ-ნომრის ფორმატი"
         type="number"
       />
-      <MainBtn
+      <MainLink
         color="white"
         bg="secondary"
-        px={['28px', '52px']}
-        py={['24px', '30px']}
-        fontSize="18px"
-        mb={['32px', '2px']}
+        px={['35px', '78px']}
+        py={['10px', '16px']}
         ml="auto"
+        to="/laptop-specs"
         text="შემდეგი"
-      ></MainBtn>
+      />
       <FooterLogo />
     </Flex>
   );

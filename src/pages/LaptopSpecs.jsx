@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Flex,
-  Button,
   FormControl,
   FormHelperText,
   FormLabel,
@@ -9,12 +8,12 @@ import {
   InputGroup,
   InputRightElement,
 } from '@chakra-ui/react';
+import MainLink from 'components/MainLink';
 import MainHeader from 'components/MainHeader';
 import ImageBtn from 'components/ImageBtn';
 import FormInput from 'components/FormInput';
 import SelectInput from 'components/SelectInput';
 import RadioInput from 'components/RadioInput';
-import MainBtn from 'components/MainBtn';
 import FooterLogo from 'components/FooterLogo';
 
 const LaptopSpecs = () => {
@@ -24,6 +23,7 @@ const LaptopSpecs = () => {
         text1="მომხმარებლის ინფო"
         text2="ლეპტოპის მახასიათებლები"
         display1={['none', 'inline']}
+        to="/user-info"
       />
       <ImageBtn />
       <Flex
@@ -123,18 +123,21 @@ const LaptopSpecs = () => {
         value2="მეორადი"
       />
       <Flex justify="space-between" align="center">
-        <Button color="secondary" variant="unstyled" fontSize="18px" mb="32px">
-          უკან
-        </Button>
-        <MainBtn
+        <MainLink
+          color="secondary-blue"
+          variant="unstyled"
+          to="/user-info"
+          text="უკან"
+        />
+        <MainLink
           color="white"
           bg="secondary"
-          px="28px"
-          py="24px"
-          fontSize="18px"
-          mb="32px"
-          text="დამახსოვრება"
-        ></MainBtn>
+          px={['35px', '78px']}
+          py={['10px', '16px']}
+          ml="auto"
+          to="/success"
+          text="შემდეგი"
+        />
       </Flex>
       <FooterLogo />
     </Flex>
