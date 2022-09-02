@@ -2,7 +2,19 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link } from '@chakra-ui/react';
 
-const MainLink = ({ text, bg, color, w, px, py, ml, mb, to, variant }) => {
+const MainLink = ({
+  text,
+  bg,
+  color,
+  w,
+  px,
+  py,
+  ml,
+  mb,
+  to,
+  variant,
+  zIndex,
+}) => {
   return (
     <Link
       bg={bg}
@@ -17,6 +29,7 @@ const MainLink = ({ text, bg, color, w, px, py, ml, mb, to, variant }) => {
       color={color}
       borderRadius="8px"
       textAlign="center"
+      zIndex={zIndex}
       as={RouterLink}
       to={to}
     >

@@ -13,6 +13,7 @@ const MainBtn = ({
   ml,
   text,
   zIndex,
+  onClick,
 }) => {
   return (
     <Button
@@ -28,6 +29,7 @@ const MainBtn = ({
       mt={mt}
       variant={variant}
       zIndex={zIndex}
+      onClick={onClick}
     >
       {text}
     </Button>
