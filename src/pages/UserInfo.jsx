@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex } from '@chakra-ui/react';
-import Header from 'components/Header';
+import MainHeader from 'components/MainHeader';
 import FormInput from 'components/FormInput';
 import SelectInput from 'components/SelectInput';
 import MainBtn from 'components/MainBtn';
@@ -9,7 +9,7 @@ import FooterLogo from 'components/FooterLogo';
 const UserInfo = () => {
   return (
     <Flex direction="column" justify="space-between" h={['', '100vh']}>
-      <Header
+      <MainHeader
         text1="მომხმარებლის ინფო"
         text2="ლეპტოპის მახასიათებლები"
         display2={['none', 'inline']}

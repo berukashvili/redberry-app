@@ -9,7 +9,7 @@ import {
   InputGroup,
   InputRightElement,
 } from '@chakra-ui/react';
-import Header from 'components/Header';
+import MainHeader from 'components/MainHeader';
 import ImageBtn from 'components/ImageBtn';
 import FormInput from 'components/FormInput';
 import SelectInput from 'components/SelectInput';
@@ -20,7 +20,7 @@ import FooterLogo from 'components/FooterLogo';
 const LaptopSpecs = () => {
   return (
     <Flex direction="column" justify="space-between">
-      <Header
+      <MainHeader
         text1="მომხმარებლის ინფო"
         text2="ლეპტოპის მახასიათებლები"
         display1={['none', 'inline']}
