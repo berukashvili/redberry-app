@@ -1,11 +1,10 @@
 import React from 'react';
 import { useLocation, Link as RouterLink } from 'react-router-dom';
-import { Link } from '@chakra-ui/react';
 import MainLink from './MainLink';
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Text, Link, Divider } from '@chakra-ui/react';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 
-const Header = ({ display1, display2, text1, text2, to }) => {
+const Header = ({ display1, display2, text1, text2, to, vis1, vis2 }) => {
   const { pathname } = useLocation();
   const pageCount = pathname === '/user-info' ? '1/2' : '2/2';
 
@@ -39,20 +38,38 @@ const Header = ({ display1, display2, text1, text2, to }) => {
         mt="30px"
         mb="10px"
       >
-        <MainLink
-          display={display1}
-          fontSize={['16px', '20px']}
-          fontWeight="700"
-          text={text1}
-          to="/user-info"
-        />
-        <MainLink
-          display={display2}
-          fontSize={['16px', '20px']}
-          fontWeight="700"
-          text={text2}
-          to="/laptop-specs"
-        />
+        <Flex direction="column">
+          <MainLink
+            display={display1}
+            fontSize={['16px', '20px']}
+            fontWeight="700"
+            text={text1}
+            to="/user-info"
+          />
+          <Divider
+            visibility={vis1}
+            orientation="horizontal"
+            bg="black"
+            mt="15px"
+            h="2px"
+          />
+        </Flex>
+        <Flex direction="column">
+          <MainLink
+            display={display2}
+            fontSize={['16px', '20px']}
+            fontWeight="700"
+            text={text2}
+            to="/laptop-specs"
+          />
+          <Divider
+            visibility={vis2}
+            orientation="horizontal"
+            bg="black"
+            mt="15px"
+            h="2px"
+          />
+        </Flex>
       </Flex>
       <Text
         fontSize="14"

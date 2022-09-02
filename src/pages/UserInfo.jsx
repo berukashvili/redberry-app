@@ -14,6 +14,7 @@ const UserInfo = () => {
         text2="ლეპტოპის მახასიათებლები"
         display2={['none', 'inline']}
         to="/landing"
+        vis2="hidden"
       />
       <Flex direction={['column', 'row']} justify="space-between">
         <FormInput
@@ -59,7 +60,7 @@ const UserInfo = () => {
         color="white"
         bg="secondary"
         px={['35px', '78px']}
-        py={['10px', '16px']}
+        py={['8px', '16px']}
         ml="auto"
         to="/laptop-specs"
         text="შემდეგი"

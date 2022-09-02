@@ -4,6 +4,7 @@ import { Link } from '@chakra-ui/react';
 
 const MainLink = ({
   text,
+  display,
   bg,
   color,
   w,
@@ -18,6 +19,7 @@ const MainLink = ({
   return (
     <Link
       bg={bg}
+      display={display}
       variant={variant}
       w={w}
       px={px}

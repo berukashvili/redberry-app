@@ -38,6 +38,8 @@ const LaptopSpecs = () => {
           text2="ლეპტოპის მახასიათებლები"
           display1={['none', 'inline']}
           to="/user-info"
+          vis1="hidden"
+          vis2="visible"
         />
         <ImageBtn />
         <Flex
@@ -145,6 +147,7 @@ const LaptopSpecs = () => {
           />
           <MainBtn
             color="white"
+            fontSize="18px"
             bg="secondary"
             px={['35px', '60px']}
             py={['10px', '30px']}

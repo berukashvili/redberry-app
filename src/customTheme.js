@@ -16,10 +16,6 @@ const customTheme = extendTheme({
         color: 'black',
         backgroundColor: 'primary',
       },
-
-      option: {
-        backgroundColor: 'white',
-      },
     },
   },
 
@@ -33,8 +29,18 @@ const customTheme = extendTheme({
     md: '1920px',
   },
   components: {
-    Button: { baseStyle: { _focus: { boxShadow: 'none' } } },
-    Link: { baseStyle: { _focus: { boxShadow: 'none' } } },
+    Button: {
+      baseStyle: {
+        _focus: { boxShadow: 'none' },
+        _hover: { boxShadow: 'none' },
+      },
+    },
+    Link: {
+      baseStyle: {
+        _focus: { boxShadow: 'none' },
+        _hover: { textDecoration: 'none' },
+      },
+    },
   },
 });
 
