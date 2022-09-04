@@ -1,8 +1,8 @@
 import React from 'react';
 import { Flex, Divider } from '@chakra-ui/react';
+import AltHeader from 'components/headers/AltHeader';
 import Picture from 'components/Picture';
 import DetailsList from 'components/DetailsList';
-import AltHeader from 'components/AltHeader';
 
 const Details = () => {
   return (

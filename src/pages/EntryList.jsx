@@ -1,7 +1,7 @@
 import React from 'react';
-import List from 'components/List';
 import { Flex } from '@chakra-ui/react';
-import AltHeader from 'components/AltHeader';
+import AltHeader from 'components/headers/AltHeader';
+import List from 'components/list/List';
 
 const EntryList = () => {
   return (

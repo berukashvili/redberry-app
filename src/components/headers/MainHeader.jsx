@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, Link as RouterLink } from 'react-router-dom';
-import MainLink from './MainLink';
+import MainLink from 'components/MainLink';
 import { Flex, Text, Link, Divider } from '@chakra-ui/react';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 

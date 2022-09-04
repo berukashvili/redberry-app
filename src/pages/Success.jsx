@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Flex, Button, Text } from '@chakra-ui/react';
 import Picture from 'components/Picture';
-import MainBtn from 'components/MainBtn';
+import MainBtn from 'components/buttons/MainBtn';
 
 const Success = () => {
   return (

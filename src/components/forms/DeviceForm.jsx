@@ -11,16 +11,16 @@ import {
   InputRightElement,
 } from '@chakra-ui/react';
 import MainLink from 'components/MainLink';
-import MainHeader from 'components/MainHeader';
-import ImageBtn from 'components/ImageBtn';
-import FormInput from 'components/FormInput';
-import SelectInput from 'components/SelectInput';
-import RadioInput from 'components/RadioInput';
-import FooterLogo from 'components/FooterLogo';
-import MainBtn from 'components/MainBtn';
+import MainHeader from 'components/headers/MainHeader';
+import ImageBtn from 'components/buttons/ImageBtn';
+import FormInput from 'components/forms/inputs/FormInput';
+import SelectInput from 'components/forms/inputs/SelectInput';
+import RadioInput from 'components/forms/inputs/RadioInput';
+import MainBtn from 'components/buttons/MainBtn';
 import MainModal from 'components/MainModal';
+import FooterLogo from 'components/FooterLogo';
 
-const LaptopSpecs = () => {
+const DeviceForm = () => {
   const [contentDisplay, setContentDisplay] = useState('flex');
   const [display, setDisplay] = useState('none');
 
@@ -163,4 +163,4 @@ const LaptopSpecs = () => {
   );
 };
 
-export default LaptopSpecs;
+export default DeviceForm;

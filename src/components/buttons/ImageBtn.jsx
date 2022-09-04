@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Flex, Box, Text } from '@chakra-ui/react';
-import Picture from './Picture';
+import Picture from 'components/Picture';
 import MainBtn from './MainBtn';
 
 const ImageBtn = () => {
