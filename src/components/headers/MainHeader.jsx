@@ -1,12 +1,10 @@
-import React from 'react';
-import { useLocation, Link as RouterLink } from 'react-router-dom';
-import MainLink from 'components/MainLink';
-import { Flex, Text, Link, Divider } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Flex, Text, Link, Divider, Button } from '@chakra-ui/react';
 import { ChevronLeftIcon } from '@chakra-ui/icons';
 
-const Header = ({ display1, display2, text1, text2, to, vis1, vis2 }) => {
-  const { pathname } = useLocation();
-  const pageCount = pathname === '/user-info' ? '1/2' : '2/2';
+const Header = ({ to, activeTab, handleActiveOn, handleActiveOff }) => {
+  //Divider Toggle
 
   return (
     <Flex
@@ -15,7 +13,7 @@ const Header = ({ display1, display2, text1, text2, to, vis1, vis2 }) => {
       mb={['20px', '75px']}
       align="center"
     >
-      <Link
+      {/* <Link
         variant="unstyled"
         position="absolute"
         top={['18px', '55px']}
@@ -28,7 +26,7 @@ const Header = ({ display1, display2, text1, text2, to, vis1, vis2 }) => {
         to={to}
       >
         {<ChevronLeftIcon w="32px" h="32px" />}
-      </Link>
+      </Link> */}
       <Flex
         direction={['column', 'row']}
         justify={['', 'space-between']}
@@ -39,36 +37,27 @@ const Header = ({ display1, display2, text1, text2, to, vis1, vis2 }) => {
         mb="10px"
       >
         <Flex direction="column">
-          <MainLink
-            display={display1}
+          <Button
+            onClick={handleActiveOn}
+            variant="unstyled"
             fontSize={['16px', '20px']}
             fontWeight="700"
-            text={text1}
-            to="/user-info"
-          />
-          <Divider
-            visibility={vis1}
-            orientation="horizontal"
-            bg="black"
-            mt="15px"
-            h="2px"
-          />
+          >
+            მომხმარებლის ინფო
+          </Button>
+          {/* <Divider orientation="horizontal" bg="black" mt="15px" h="2px" /> */}
         </Flex>
         <Flex direction="column">
-          <MainLink
-            display={display2}
+          <Button
+            onClick={handleActiveOff}
+            variant="unstyled"
             fontSize={['16px', '20px']}
             fontWeight="700"
-            text={text2}
-            to="/laptop-specs"
-          />
-          <Divider
-            visibility={vis2}
-            orientation="horizontal"
-            bg="black"
-            mt="15px"
-            h="2px"
-          />
+          >
+            ლეპტოპის მახასიათებლები
+          </Button>
+
+          {/* <Divider orientation="horizontal" bg="black" mt="15px" h="2px" /> */}
         </Flex>
       </Flex>
       <Text
@@ -77,7 +66,7 @@ const Header = ({ display1, display2, text1, text2, to, vis1, vis2 }) => {
         textAlign="center"
         display={['inline', 'none']}
       >
-        {pageCount}
+        1/2
       </Text>
     </Flex>
   );

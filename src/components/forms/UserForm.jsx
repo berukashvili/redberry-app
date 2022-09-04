@@ -1,21 +1,24 @@
 import React from 'react';
-import { Flex } from '@chakra-ui/react';
-import MainLink from 'components/MainLink';
-import MainHeader from 'components/headers/MainHeader';
+import { Flex, Button } from '@chakra-ui/react';
 import FormInput from 'components/forms/inputs/FormInput';
 import SelectInput from './inputs/SelectInput';
-import FooterLogo from 'components/FooterLogo';
+import MainBtn from 'components/buttons/MainBtn';
 
-const UserForms = ({ formikName, formikSurname, formikEmail, formikPhone }) => {
+const UserForms = ({
+  formikName,
+  formikSurname,
+  formikEmail,
+  formikPhone,
+  firstTab,
+  handleActiveOff,
+}) => {
   return (
-    <Flex direction="column" justify="space-between" h={['', '100vh']}>
-      <MainHeader
-        text1="მომხმარებლის ინფო"
-        text2="ლეპტოპის მახასიათებლები"
-        display2={['none', 'inline']}
-        to="/landing"
-        vis2="hidden"
-      />
+    <Flex
+      direction="column"
+      justify="space-between"
+      h={['', '100vh']}
+      display={firstTab}
+    >
       <Flex direction={['column', 'row']} justify="space-between">
         <FormInput
           {...formikName}
@@ -66,17 +69,15 @@ const UserForms = ({ formikName, formikSurname, formikEmail, formikPhone }) => {
         textHelper=" ქართული მობ-ნომრის ფორმატი"
         type="number"
       />
-      <MainLink
+      <MainBtn
         color="white"
         bg="secondary"
-        px={['35px', '78px']}
-        py={['8px', '16px']}
+        px={['35px', '60px']}
+        py={['8px', '30px']}
         ml="auto"
-        to="/laptop-specs"
         text="შემდეგი"
-        // onSubmit={formik.handleSubmit}
+        onClick={handleActiveOff}
       />
-      <FooterLogo />
     </Flex>
   );
 };

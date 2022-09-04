@@ -15,7 +15,6 @@ const TestInput = ({
   type,
   w,
   ml,
-  onSubmit,
   onChange,
   touched,
   onBlur,
@@ -23,13 +22,7 @@ const TestInput = ({
   value,
 }) => {
   return (
-    <FormControl
-      ml={ml}
-      mb="40px"
-      w={w}
-      // onSubmit={onSubmit}
-      isInvalid={errors && touched}
-    >
+    <FormControl ml={ml} mb="40px" w={w} isInvalid={errors && touched}>
       <FormLabel fontSize="18px" fontWeight="500">
         {label}
       </FormLabel>

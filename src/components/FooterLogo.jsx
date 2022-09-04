@@ -1,9 +1,9 @@
 import React from 'react';
 import { Flex, Box, Image } from '@chakra-ui/react';
 
-const FooterLogo = () => {
+const FooterLogo = ({ mt }) => {
   return (
-    <Flex mb="45px" w="100%" justify="center">
+    <Flex mt={mt} mb="45px" w="100%" justify="center">
       <Box boxSize="85px" display={['none', 'inline']}>
         <Image
           objectFit="cover"

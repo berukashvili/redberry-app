@@ -36,7 +36,7 @@ const Landing = () => {
           py="15px"
           mb="32px"
           color="white"
-          to="/user-info"
+          to="/forms"
           text="ჩანაწერის დამატება"
         />
         <MainLink

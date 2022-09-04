@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {
   Flex,
   Box,
+  Button,
   FormControl,
   FormHelperText,
   FormLabel,
@@ -10,17 +11,14 @@ import {
   InputGroup,
   InputRightElement,
 } from '@chakra-ui/react';
-import MainLink from 'components/MainLink';
-import MainHeader from 'components/headers/MainHeader';
 import ImageBtn from 'components/buttons/ImageBtn';
 import FormInput from 'components/forms/inputs/FormInput';
 import SelectInput from 'components/forms/inputs/SelectInput';
 import RadioInput from 'components/forms/inputs/RadioInput';
 import MainBtn from 'components/buttons/MainBtn';
 import MainModal from 'components/MainModal';
-import FooterLogo from 'components/FooterLogo';
 
-const DeviceForm = () => {
+const DeviceForm = ({ handleActiveOn }) => {
   const [contentDisplay, setContentDisplay] = useState('flex');
   const [display, setDisplay] = useState('none');
 
@@ -32,15 +30,7 @@ const DeviceForm = () => {
   return (
     <Box h="100%">
       <MainModal display={display} />
-      <Flex display={contentDisplay} direction="column" justify="space-between">
-        <MainHeader
-          text1="მომხმარებლის ინფო"
-          text2="ლეპტოპის მახასიათებლები"
-          display1={['none', 'inline']}
-          to="/user-info"
-          vis1="hidden"
-          vis2="visible"
-        />
+      <Flex direction="column" justify="space-between">
         <ImageBtn />
         <Flex
           direction={['column', 'row']}
@@ -70,7 +60,7 @@ const DeviceForm = () => {
             placeholder="CPU"
             list={['Intel', 'AMD', 'Applle', 'Qualcomm']}
             mr={['', '24px']}
-            mt="11px"
+            mt="10px"
             w={['100%', '300px']}
           />
           <FormInput
@@ -139,25 +129,25 @@ const DeviceForm = () => {
           value2="მეორადი"
         />
         <Flex justify="space-between" align="center">
-          <MainLink
+          <Button
             color="secondary-blue"
             variant="unstyled"
-            to="/user-info"
-            text="უკან"
-          />
+            onClick={handleActiveOn}
+          >
+            უკან
+          </Button>
           <MainBtn
             color="white"
             fontSize="18px"
             bg="secondary"
-            px={['35px', '60px']}
+            px={['35px', '40px']}
             py={['10px', '30px']}
             ml="auto"
             to="/success"
-            text="შემდეგი"
+            text="ჩანაწერის შენახვა"
             onClick={handleDisplay}
           />
         </Flex>
-        <FooterLogo />
       </Flex>
     </Box>
   );
