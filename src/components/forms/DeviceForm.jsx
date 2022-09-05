@@ -1,6 +1,6 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { teams } from 'api/RedberryApi';
+import { useState } from 'react';
+
 import {
   Flex,
   Box,
@@ -18,7 +18,6 @@ import SelectInput from 'components/forms/inputs/SelectInput';
 import RadioInput from 'components/forms/inputs/RadioInput';
 import MainBtn from 'components/buttons/MainBtn';
 import MainModal from 'components/MainModal';
-import { useData } from 'hooks/useData';
 
 const DeviceForm = ({
   handleActiveOn,
@@ -27,17 +26,13 @@ const DeviceForm = ({
   formikThread,
   formikRam,
   formikDate,
-  formikPrice,
 }) => {
-  const [contentDisplay, setContentDisplay] = useState('flex');
   const [display, setDisplay] = useState('none');
 
   //Teams and Positions Data
-  const { brands, cpus } = useData();
 
   //Modal
   const handleDisplay = () => {
-    setContentDisplay('none');
     setDisplay('inline');
   };
 

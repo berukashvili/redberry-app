@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Select } from '@chakra-ui/react';
-import { fetchTeams } from 'api/RedberryApi';
 
 const SelectInput = ({
   placeholder,
