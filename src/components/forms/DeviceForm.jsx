@@ -1,5 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { teams } from 'api/RedberryApi';
 import {
   Flex,
   Box,
@@ -17,11 +18,24 @@ import SelectInput from 'components/forms/inputs/SelectInput';
 import RadioInput from 'components/forms/inputs/RadioInput';
 import MainBtn from 'components/buttons/MainBtn';
 import MainModal from 'components/MainModal';
+import { useData } from 'hooks/useData';
 
-const DeviceForm = ({ handleActiveOn }) => {
+const DeviceForm = ({
+  handleActiveOn,
+  formikDevice,
+  formikCore,
+  formikThread,
+  formikRam,
+  formikDate,
+  formikPrice,
+}) => {
   const [contentDisplay, setContentDisplay] = useState('flex');
   const [display, setDisplay] = useState('none');
 
+  //Teams and Positions Data
+  const { brands, cpus } = useData();
+
+  //Modal
   const handleDisplay = () => {
     setContentDisplay('none');
     setDisplay('inline');
@@ -38,6 +52,7 @@ const DeviceForm = ({ handleActiveOn }) => {
           justify={['', 'space-between']}
         >
           <FormInput
+            {...formikDevice}
             label="ლეპტოპის სახელი"
             placeholder="HP"
             val="ლათინური ასოები, ციფრები, !@#$%^&*()_+="
@@ -45,8 +60,8 @@ const DeviceForm = ({ handleActiveOn }) => {
             w={['100%', '390px']}
           />
           <SelectInput
+            // list={brands}
             placeholder="ლეპტოპის ბრენდი"
-            list={['Acer', 'Lenovo', 'Asus', 'Apple']}
             w={['100%', '390px']}
             mt="11px"
           />
@@ -57,23 +72,25 @@ const DeviceForm = ({ handleActiveOn }) => {
           justify={['', 'space-between']}
         >
           <SelectInput
+            // list={cpus}
             placeholder="CPU"
-            list={['Intel', 'AMD', 'Applle', 'Qualcomm']}
             mr={['', '24px']}
             mt="10px"
             w={['100%', '300px']}
           />
           <FormInput
+            {...formikCore}
             label="CPU-ს ბირთვი"
             placeholder="14"
-            val="მხოლოდ ციფრები"
+            textHelper="მხოლოდ ციფრები"
             type="number"
             w={['100%', '300px']}
           />
           <FormInput
+            {...formikThread}
             label="CPU-ს ნაკადი"
             placeholder="365"
-            val="მხოლოდ ციფრები"
+            textHelper="მხოლოდ ციფრები"
             type="number"
             w={['100%', '300px']}
             ml={['', '24px']}
@@ -85,9 +102,10 @@ const DeviceForm = ({ handleActiveOn }) => {
           justify={['', 'space-between']}
         >
           <FormInput
+            {...formikRam}
             label="ლეპტოპის RAM (GB)"
             placeholder="16"
-            val="მხოლოდ ციფრები"
+            textHelper="მხოლოდ ციფრები"
             type="number"
             w={['100%', '390px']}
           />
@@ -100,9 +118,10 @@ const DeviceForm = ({ handleActiveOn }) => {
         </Flex>
         <Flex direction={['column', 'row']} justify={['', 'space-between']}>
           <FormInput
+            {...formikDate}
             label="შეძენის რიცხვი (არჩევითი)"
             placeholder="დდ/თთ/წწწწ"
-            val="მხოლოდ ციფრები"
+            textHelper="მხოლოდ ციფრები"
             type="datetime"
             w={['100%', '390px']}
           />

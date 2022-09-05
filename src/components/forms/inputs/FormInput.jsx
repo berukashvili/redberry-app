@@ -7,7 +7,7 @@ import {
   FormErrorMessage,
 } from '@chakra-ui/react';
 
-const TestInput = ({
+const FormInput = ({
   label,
   placeholder,
   textHelper,
@@ -46,4 +46,4 @@ const TestInput = ({
   );
 };
 
-export default TestInput;
+export default FormInput;

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Select } from '@chakra-ui/react';
+import { fetchTeams } from 'api/RedberryApi';
 
 const SelectInput = ({
   placeholder,
   name,
-  list,
   mt,
   mr,
   w,
@@ -28,13 +28,18 @@ const SelectInput = ({
       mb="40px"
       w={w}
     >
-      {list.map(text => {
+      {/* {teams?.map(item => {
         return (
-          <option key={text} onChange={onChange} onBlur={onBlur} values={value}>
-            {text}
+          <option
+            key={item.id}
+            onChange={onChange}
+            onBlur={onBlur}
+            value={value}
+          >
+            {item.name}
           </option>
         );
-      })}
+      })} */}
     </Select>
   );
 };

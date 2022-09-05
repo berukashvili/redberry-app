@@ -1,17 +1,30 @@
-import React from 'react';
-import { Flex, Button } from '@chakra-ui/react';
+import React, { useState, useEffect } from 'react';
+import { Flex } from '@chakra-ui/react';
 import FormInput from 'components/forms/inputs/FormInput';
 import SelectInput from './inputs/SelectInput';
 import MainBtn from 'components/buttons/MainBtn';
+import { fetchTeams } from 'api/RedberryApi';
 
 const UserForms = ({
   formikName,
   formikSurname,
+  formikTeam,
   formikEmail,
   formikPhone,
   firstTab,
   handleActiveOff,
 }) => {
+  const [teams, setTeams] = useState([]);
+  //Teams and Positions Data
+  useEffect(() => {
+    const getTeams = async () => {
+      const { data } = await fetchTeams.get('/teams');
+      setTeams(data);
+    };
+
+    getTeams();
+  }, []);
+
   return (
     <Flex
       direction="column"
@@ -42,16 +55,12 @@ const UserForms = ({
       </Flex>
       <Flex direction="column" my="20px">
         <SelectInput
+          {...formikTeam}
           name="team"
           placeholder="თიმი"
-          list={['დეველოპმენტი', 'HR', 'გაყიდვები', 'მარკეტინგი']}
           mb={['70px', '50px']}
         />
-        <SelectInput
-          name="position"
-          placeholder="პოზიცია"
-          list={['სენიორი', 'ინტერნი', 'მიდლი', 'ლიდი']}
-        />
+        <SelectInput name="position" placeholder="პოზიცია" />
       </Flex>
       <FormInput
         {...formikEmail}

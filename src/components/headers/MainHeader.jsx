@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import { Flex, Text, Link, Divider, Button } from '@chakra-ui/react';
-import { ChevronLeftIcon } from '@chakra-ui/icons';
+import React from 'react';
 
-const Header = ({ to, activeTab, handleActiveOn, handleActiveOff }) => {
+import { Flex, Text, Button } from '@chakra-ui/react';
+
+const Header = ({ textOn, textOff, handleActiveOn, handleActiveOff }) => {
   //Divider Toggle
 
   return (
@@ -38,6 +37,7 @@ const Header = ({ to, activeTab, handleActiveOn, handleActiveOff }) => {
       >
         <Flex direction="column">
           <Button
+            display={textOn}
             onClick={handleActiveOn}
             variant="unstyled"
             fontSize={['16px', '20px']}
@@ -49,6 +49,7 @@ const Header = ({ to, activeTab, handleActiveOn, handleActiveOff }) => {
         </Flex>
         <Flex direction="column">
           <Button
+            display={textOff}
             onClick={handleActiveOff}
             variant="unstyled"
             fontSize={['16px', '20px']}
